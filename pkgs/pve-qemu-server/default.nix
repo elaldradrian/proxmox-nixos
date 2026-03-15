@@ -63,8 +63,8 @@ perl540.pkgs.toPerlModule (
 
     src = fetchgit {
       url = "git://git.proxmox.com/git/qemu-server.git";
-      rev = "5a3ca25256951d01cd792700c2d257dfc6ea46e9";
-      hash = "sha256-bUkelrm4LiLdz2XedtGtxrGDwi0/CXqGWS8EHzj3q9E=";
+      rev = "6e4d3a96fcb99ab173b45e735fa7f8a51ba42d9c";
+      hash = "sha256-oS6eIJsArBhnnOlEW88jk9y5I0aZTrC+/8LjhKcN3+o=";
     };
 
     sourceRoot = "${src.name}/src";

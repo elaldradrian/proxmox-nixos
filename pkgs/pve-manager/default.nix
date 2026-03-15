@@ -78,6 +78,7 @@ perl540.pkgs.toPerlModule (
       ./0001-no-apt-update.patch
       ./0002-no-repo-status.patch
       ./0003-ceph-handle-system-units.patch
+      ./0004-virt-machine-type-aarch64.patch
     ];
 
     postPatch = ''
