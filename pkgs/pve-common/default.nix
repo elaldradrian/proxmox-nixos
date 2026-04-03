@@ -115,9 +115,9 @@ perl540.pkgs.toPerlModule (
         includeHeaders =
           "{sys,bits,}/syscall.h "
           + (
-            if (stdenv.buildPlatform.system == "x86_64-linux") then
+            if (stdenv.hostPlatform.system == "x86_64-linux") then
               "asm/unistd{,_64}.h"
-            else if (stdenv.buildPlatform.system == "aarch64-linux") then
+            else if (stdenv.hostPlatform.system == "aarch64-linux") then
               "asm/unistd{,_64}.h asm-generic/{unistd,bitsperlong}.h"
             else
               "asm{,-generic}/{unistd,bitsperlong}.h"
