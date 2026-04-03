@@ -1,7 +1,7 @@
 diff --git a/src/PVE/API2/Qemu/Machine.pm b/src/PVE/API2/Qemu/Machine.pm
 index 26195eae..aa012a71 100644
---- a/src/PVE/API2/Qemu/Machine.pm
-+++ b/src/PVE/API2/Qemu/Machine.pm
+--- a/PVE/API2/Qemu/Machine.pm
++++ b/PVE/API2/Qemu/Machine.pm
 @@ -41,7 +41,7 @@ __PACKAGE__->register_method({
                  },
                  type => {
