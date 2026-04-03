@@ -69,6 +69,10 @@ perl540.pkgs.toPerlModule (
 
     sourceRoot = "${src.name}/src";
 
+    patches = [
+      ./machine-types-non-x86.patch
+    ];
+
     postPatch = ''
       sed -i {qmeventd/,bin/}Makefile \
         -e "/GITVERSION/d" \
