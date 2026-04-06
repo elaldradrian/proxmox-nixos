@@ -42,7 +42,12 @@
             };
           in
           {
-            overlays = _: _: (import ./pkgs { inherit pkgs; });
+            overlays =
+              _: _:
+              (import ./pkgs {
+                inherit pkgs;
+                baseCeph = nixpkgs-stable.legacyPackages.${system}.ceph;
+              });
 
             packages = utils.lib.filterPackages system (import ./pkgs { inherit pkgs; });
 

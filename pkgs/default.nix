@@ -1,5 +1,6 @@
 {
   pkgs,
+  baseCeph ? null,
   ...
 }:
 let
@@ -22,7 +23,7 @@ let
 
     extjs = callPackage ./extjs { };
     fonts-font-logos = callPackage ./fonts-font-logos { };
-    
+
     markedjs = callPackage ./markedjs { };
     qrcodejs = callPackage ./qrcodejs { };
     perlmod = callPackage ./perlmod { };
@@ -72,6 +73,8 @@ let
     nixmoxer = callPackage ./nixmoxer { };
     pve-update = callPackage ./pve-update { };
     pve-update-script = callPackage ./pve-update/pve-update-script.nix { };
+
+    ceph = baseCeph;
   };
 in
 ours
