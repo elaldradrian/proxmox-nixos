@@ -218,7 +218,7 @@ in
         3300
         6789
       ];
-      allowedTCPPortRanges = lib.optionals (cfg.osd.enable || cfg.msd.enable || cfg.mgr.enable) [
+      allowedTCPPortRanges = lib.optionals (cfg.osd.enable || cfg.mds.enable || cfg.mgr.enable) [
         {
           from = 6800;
           to = 7300;
