@@ -64,11 +64,9 @@ in
       };
 
       # create the /etc/network/interfaces file for proxmox
-      # also provide /bin/login which termproxy hardcodes
       systemd.tmpfiles.rules = [
         "d /etc/network 0755 root root -"
         "f /etc/network/interfaces 0755 root root -"
-        "L+ /bin/login - - - - ${pkgs.shadow}/bin/login"
       ];
 
       services.openssh = {
